@@ -6,7 +6,7 @@
 
  <modelVersion> 4.0.0 </modelVersion>​​​
 
- < groupId > gustavo-graciano </ groupId >
+ < groupId >Diego-Ferreira</ groupId >
  < artefactId > jogo-da-velha </ artefactId >
  < versão > 1.0-SNAPSHOT </ versão >
 
