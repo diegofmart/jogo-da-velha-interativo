@@ -73,6 +73,4 @@ private JogoDaVelha(Jogador jogador1, Jogador jogador2, Tabuleiro tabuleiro)
     
 }
 
-}
-
      
