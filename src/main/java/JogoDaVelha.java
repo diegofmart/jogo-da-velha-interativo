@@ -81,6 +81,6 @@ class JogoDaVelha {
             System.out.println("O jogo terminou empatado.");
         }
 
-        System.out.println("Criado por Davi Buer");
+        System.out.println("Criado por Diego F.");
     }
 }
