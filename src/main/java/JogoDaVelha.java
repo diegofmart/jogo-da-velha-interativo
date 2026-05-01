@@ -2,17 +2,20 @@ import java.util.Random;
 import java.util.Scanner;
 
 class JogoDaVelha {
-    
-private JogoDaVelha(Jogador jogador1, Jogador jogador2, Tabuleiro tabuleiro)
-{
-    this.jogador1 = jogador1;
-    this.jogador2 = jogador2;
-    this.tabuleiro = tabuleiro;
-}
 
-    private void iniciar () {
-           Scanner sc = new Scanner(System.in);
-        Random random = new Random();
+    private Jogador jogador1;
+    private Jogador jogador2;
+    private Tabuleiro tabuleiro;
+
+    public JogoDaVelha(Jogador jogador1, Jogador jogador2, Tabuleiro tabuleiro) {
+        this.jogador1 = jogador1;
+        this.jogador2 = jogador2;
+        this.tabuleiro = tabuleiro;
+    }
+
+    public static void main(String args[]) {
+
+        Scanner sc = new Scanner(System.in);
 
         System.out.print("Escolha seu símbolo (X ou O): ");
         char simboloHumano = sc.next().toUpperCase().charAt(0);
@@ -23,6 +26,15 @@ private JogoDaVelha(Jogador jogador1, Jogador jogador2, Tabuleiro tabuleiro)
         Jogador jogador2 = new Jogador(simboloMaquina, "Máquina");
 
         Tabuleiro tabuleiro = new Tabuleiro();
+
+        JogoDaVelha jogoDaVelha = new JogoDaVelha(jogador1, jogador2, tabuleiro);
+        jogoDaVelha.iniciar();
+    }
+
+    private void iniciar() {
+
+        Scanner sc = new Scanner(System.in);
+        Random random = new Random();
 
         int linha, coluna;
         boolean vezHumano = true;
@@ -42,7 +54,7 @@ private JogoDaVelha(Jogador jogador1, Jogador jogador2, Tabuleiro tabuleiro)
                     if (tabuleiro.jogar(jogador1.getSimbolo(), linha, coluna)) {
                         break;
                     } else {
-                        System.out.println("Posição ocupada! Tenta de novo.");
+                        System.out.println("Jogada inválida! Tenta de novo.");
                     }
                 }
 
@@ -61,16 +73,14 @@ private JogoDaVelha(Jogador jogador1, Jogador jogador2, Tabuleiro tabuleiro)
 
         if (tabuleiro.haUmVencedor()) {
             if (!vezHumano) {
-                System.out.println("O jogador 1 ganhou");
+                System.out.println("O humano ganhou");
             } else {
-                System.out.println("O jogador 2 ganhou");
+                System.out.println("A máquina ganhou");
             }
         } else {
             System.out.println("O jogo terminou empatado.");
         }
-        System.out.println(" Feito por DIego F.");
-    }
-    
-}
 
-     
+        System.out.println("Criado por Davi Buer");
+    }
+}
