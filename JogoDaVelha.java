@@ -2,7 +2,14 @@ import java.util.Random;
 import java.util.Scanner;
 
 class JogoDaVelha {
-    public static void main(String args[]) {
+    
+private JogoDaVelha(Jogador jogador1, Jogador jogador2, Tabuleiro tabuleiro)
+{
+    this.jogador1 = jogador1;
+    this.jogador2 = jogador2;
+    this.tabuleiro = tabuleiro;
+}
+    private static void main(String args[]) {
 
         Scanner sc = new Scanner(System.in);
         Random random = new Random();
