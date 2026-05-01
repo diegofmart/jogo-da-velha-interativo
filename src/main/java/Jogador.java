@@ -1,5 +1,4 @@
-
-public class Jogador {
+public class Jogador { 
     private char simbolo;
     private String nome;
 
